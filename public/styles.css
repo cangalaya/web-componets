@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+.main-container{
+    max-width: 620px;
+    height: auto;
+    font-family:Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+.card-section--preview{
+    height: auto;
+    background-color: #4855a0;
+    color: #3f4a8d;
+    font-size: 70px;
+    font-weight: bold;
+}
+.card-section--preview > span:nth-child(1){
+    position: relative;
+    left: 30px;
+    top: 10px;
+}
+.card-section--preview > img {
+    position: relative;
+    top : -20px;
+    left: -30px;
+    width: 100%;
+}
+.card-section--description{
+    padding: 24px;
+    background-color: white;
+}
+.card-section--description .description-title,
+.card-section--description .description-category{
+    display: inline-block;
+}
+.card-section--description .description-title {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 10px 10px 10px 0;
+}
+.card-section--description .description-category{
+    color: gray;
+    text-transform: uppercase;
+}
+.card-section--description .description-text {
+    margin: 20px 0;
+    line-height: 24px;
+}
+
+.card-section--price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+.card-section--price .description-price {
+    font-size: 34px;
+    font-weight: bold;
+    color: gray;
+}
+.btn-primary {
+    height: 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    background-color: #3f4a8d;
+    color: white;
+    padding: 0 12px;
+}
+
+@media (min-width: 1024px){
+    .main-container{
+        grid-template-columns: auto auto;
+        max-width: 900px;
+    }
+    .card-section--preview{
+        height: 500px;
+        width: 400px;
+        font-size: 80px;
+    }
+    .card-section--preview > span:nth-child(1) {
+        top:22px;
+    }
+    .card-section--preview > img {
+        position: relative;
+        width: 600px;
+        transform: rotate(-35deg);
+        left: -120px;
+    }
+    .card-section--description {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        padding: 60px 40px 40px 40px;
+    }
+    .card-section--description .description-text{
+        margin-left: 40px;
+    }
+    
+}
